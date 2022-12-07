@@ -1,0 +1,40 @@
+installation de la base de données avec la commande : 
+sudo apt install mariadb-server
+
+
+Pour entrer au fichier 50-server.cnf:
+sudo vim /etc/mysql/mariadb.conf.d/50-server.cnf ( Vérifions que):
+character-set-server=utf8mb4
+collation-server=utf8mb4_general_ci)
+
+
+Redémarrage :
+sudo systemctl restart mariadb
+
+
+vérification du statut:
+Pour vérifier le status mariadb ( active or deactivate) avec la commande:
+sudo systemctl status mariadb
+
+
+
+Pour installer mysql_secure_installation avec la commande: :sudo mysql_secure_installation
+
+
+
+MYSQL: Pour accéder à mysql :
+sudo mysql
+
+
+show databases
+
+Création de la base de données
+create database test
+
+Utilisation de la base test
+Accéder à la base données test avec la commande :
+use test
+
+Création de deux tables Test
+CREATE TABLE Test(id int(10) NOT NULL, niveau varchar (100) NOT NULL);
+INSERT INTO Test(id, niveau) VALUES(‘1’,”facile”);
